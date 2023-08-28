@@ -19,6 +19,8 @@ export const createEvent = async( req, res = response ) => {
 
     let event = new Event( req.body );
 
+    console.log({ event })
+
 
     try {
 

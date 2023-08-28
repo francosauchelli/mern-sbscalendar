@@ -34,6 +34,7 @@ export const registerUser = async( req, res = response ) => {
         return res.status(201).json({
             ok: true,
             uid: user.id,
+            name: user.name,
             msg: `User registered: ${ user.name }`,
             token
         });
@@ -93,6 +94,8 @@ export const renewToken = async( req, res = response ) => {
 
     return res.json({
         ok: true,
+        name,
+        uid,
         token
     });
 };
